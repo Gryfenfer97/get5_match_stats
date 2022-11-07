@@ -9,6 +9,14 @@
   </head>
 
   <body>
+    <nav class="navbar navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/">
+          <img src="/assets/logo.png" alt="Logo" height="24" class="d-inline-block align-text-top">
+          Résultats CS:GO
+        </a>
+      </div>
+    </nav>
     <main class="container">
       <h1><%= team1 %> - <%= team2 %></h1>
       <div class="container px-2">
@@ -28,6 +36,7 @@
           </div>
         </div>
       </div>
+      <div class="table-responsive">
         <table class="table">
           <thead>
             <tr>
@@ -35,7 +44,31 @@
               <th scope="col">Kills</th>
               <th scope="col">Assistances</th>
               <th scope="col">Morts</th>
-              <th scope="col"></th>
+              <th scope="col">Flash Assist</th>
+              <th scope="col">Team kill</th>
+              <th scope="col">Knife kill</th>
+              <th scope="col">Headshot kill</th>
+              <th scope="col">Dégats</th>
+              <th scope="col">Dégats d'utilitaires</th>
+              <th scope="col">Ennemis aveuglés</th>
+              <th scope="col">Amis aveuglés</th>
+              <th scope="col">Bombes plantées</th>
+              <th scope="col">Bombes désamorcées</th>
+              <th scope="col">v1</th>
+              <th scope="col">v2</th>
+              <th scope="col">v3</th>
+              <th scope="col">v4</th>
+              <th scope="col">v5</th>
+              <th scope="col">2k</th>
+              <th scope="col">3k</th>
+              <th scope="col">4k</th>
+              <th scope="col">5k</th>
+              <th scope="col">Premier kill</th>
+              <th scope="col">Premier mort</th>
+              <th scope="col">Tradekill</th>
+              <th scope="col">Kast</th>
+              <th scope="col">Score de contribution</th>
+              <th scope="col">MVP</th>
             </tr>
           </thead>
           <tbody>
@@ -46,10 +79,35 @@
               <td><%= player.assists %></td>
               <td><%= player.deaths %></td>
               <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
             </tr>
             <% } %>
           </tbody>
         </table>
+      </div>
     </main>
   </body>
 </html>

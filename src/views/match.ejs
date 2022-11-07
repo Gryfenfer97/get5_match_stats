@@ -9,19 +9,28 @@
   </head>
 
   <body>
-    <main class="container">
+    <nav class="navbar navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/">
+          <img src="/assets/logo.png" alt="Logo" height="24" class="d-inline-block align-text-top">
+          Résultats CS:GO
+        </a>
+      </div>
+    </nav>
+    <main class="container position-relative vh-100">
       <h1><%= team1 %> - <%= team2 %></h1>
-      <div class="d-flex">
+      <div class="d-flex justify-content-evenly position-absolute top-50 start-50 translate-middle w-100">
       <% for(let map of maps) { %>
       <div class="card" style="width: 18rem;">
         <img src="/assets/maps/<%= map.mapName %>.jpg" class="card-img-top" alt="...">
         <div class="card-body">
+          <h5 class="card-title">Map <%= map.mapNumber %></h5>
           <p class="card-text">
             <b><%= team1 %></b> : <%= map.team1Score %><br>
             <b><%= team2 %></b> : <%= map.team2Score %><br>
             <b>Durée</b>: <%= map.duration %>
           </p>
-          <a href="/match/1/map/<%= map.mapNumber %>" class="btn btn-primary stretched-link">Go somewhere</a>
+          <a href="/match/<%= matchid %>/map/<%= map.mapNumber %>" class="stretched-link">Détails</a>
         </div>
       </div>
       <% } %>

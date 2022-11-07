@@ -18,7 +18,7 @@ async function serveHomePage(_req: Request, res: Response) {
 }
 
 async function serveMatchPage(req: Request, res: Response) {
-	const matchData = { team1: 'Team 1', team2: 'Team 2', team1Score: 2, team2Score: 1, maps: [
+	const matchData = { matchid: 1, team1: 'Team 1', team2: 'Team 2', team1Score: 2, team2Score: 1, maps: [
 		{ mapName: 'de_dust2', team1Score: 16, team2Score: 14, duration: '30:32', mapNumber: 1 },
 		{ mapName: 'de_inferno', team1Score: 13, team2Score: 16, duration: '27:19', mapNumber: 2 },
 		{ mapName: 'de_mirage', team1Score: 16, team2Score: 15, duration: '40:46', mapNumber: 3 }] }
