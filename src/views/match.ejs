@@ -19,7 +19,9 @@
           <p class="card-text">
             <b><%= team1 %></b> : <%= map.team1Score %><br>
             <b><%= team2 %></b> : <%= map.team2Score %><br>
+            <b>Durée</b>: <%= map.duration %>
           </p>
+          <a href="/match/1/map/<%= map.mapNumber %>" class="btn btn-primary stretched-link">Go somewhere</a>
         </div>
       </div>
       <% } %>

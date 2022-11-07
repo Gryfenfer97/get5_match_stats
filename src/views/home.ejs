@@ -22,20 +22,15 @@
               </tr>
             </thead>
             <tbody>
+              <% for(let match of matches){ %>
               <tr>
-                <th scope="row">1</th>
-                <td>Equipe1 - Equipe2</td>
-                <td>2 - 1</td>
-                <td>BO3</td>
-                <td><a href="/match/1">Voir le détail</a></td>
+                <th scope="row"><%= match.id %></th>
+                <td><%= match.team1 %> - <%= match.team2 %></td>
+                <td><%= match.team1_score %> - <%= match.team2_score %></td>
+                <td><%= match.series_type %></td>
+                <td><a href="/match/<%= match.id %>">Voir le détail</a></td>
               </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Equipe3 - Equipe4</td>
-                <td>0 - 2</td>
-                <td>BO3</td>
-                <td><a>Voir le détail</a></td>
-              </tr>
+              <% } %>
             </tbody>
           </table>
     </main>
