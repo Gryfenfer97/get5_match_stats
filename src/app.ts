@@ -5,7 +5,6 @@ import config from './config'
 import path from 'path'
 
 const app = express();
-const port = 8000;
 
 /**
  * Trust proxy
@@ -46,6 +45,6 @@ app.disable('x-powered-by')
 /**
  * Start listening on port
  */
- app.listen(port, '127.0.0.1', () => {
-	console.log(`[WEB] App is running on: 127.0.0.1:${port}`)
+ app.listen(process.env.PORT, () => {
+	console.log(`[WEB] App is running on: http://127.0.0.1:${process.env.PORT}`)
 })

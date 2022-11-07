@@ -4,12 +4,12 @@ Test project to display get5 match statistics in a browser page
 
 ## Usage
 
-```bash
-node app.js
+```sh
+tsc
+npm run start
 ```
-You can see the match statistics on ```localhost:8000?matchid=<id>```
 
-You can use ```generate_tables.sql``` to generate the tables needed by get5 and ```tables_filler.sql``` to fill the database tables with sample data
+And then go on `http://localhost:8000`
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
