@@ -18,21 +18,21 @@
       </div>
     </nav>
     <main class="container">
-      <h1><%= team1 %> - <%= team2 %></h1>
+      <h1><%= team1_name %> - <%= team2_name %></h1>
       <div class="container px-2">
         <div class="row gx-5">
           <div class="col d-flex">
-            <img src="/assets/maps/<%= mapName %>.jpg" height="150px" class="p-3 rounded" alt="<%= mapName %>" >
+            <img src="/assets/maps/<%= map.mapname %>.jpg" height="150px" class="p-3 rounded" alt="<%= map.mapname %>" >
             <div class="position-relative w-100">
               <div class="position-absolute top-50 translate-middle-y">
-                <p><b>Début:</b> Fri, Oct 14, 2022 @ 23:34</p>
-                <p><b>Durée:</b> 36min</p>
+                <p><b>Début:</b> <%= start_time %></p>
+                <p><b>Durée:</b> <%= map.duration %>min</p>
               </div>
             </div>
           </div>
           <div class="col text-center">
             <h2><b>Resultats</b></h2>
-            <p><%= team1_score %> - <%= team2_score %></p>
+            <p><%= map.team1_score %> - <%= map.team2_score %></p>
           </div>
         </div>
       </div>
@@ -78,31 +78,31 @@
               <td><%= player.kills %></td>
               <td><%= player.assists %></td>
               <td><%= player.deaths %></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
+              <td><%= player.flashbang_assists %></td>
+              <td><%= player.teamkills %></td>
+              <td><%= player.knife_kills %></td>
+              <td><%= player.headshot_kills %></td>
+              <td><%= player.damage %></td>
+              <td><%= player.utility_damage %></td>
+              <td><%= player.enemies_flashed %></td>
+              <td><%= player.friendlies_flashed %></td>
+              <td><%= player.bomb_plants %></td>
+              <td><%= player.bomb_defuses %></td>
+              <td><%= player.v1 %></td>
+              <td><%= player.v2 %></td>
+              <td><%= player.v3 %></td>
+              <td><%= player.v4 %></td>
+              <td><%= player.v5 %></td>
+              <td><%= player['2k'] %></td>
+              <td><%= player['3k'] %></td>
+              <td><%= player['4k'] %></td>
+              <td><%= player['5k'] %></td>
+              <td><%= player.firstkill_t + player.firstkill_ct %></td>
+              <td><%= player.firstdeath_t + player.firstdeath_ct %></td>
+              <td><%= player.tradekill %></td>
+              <td><%= player.kast %></td>
+              <td><%= player.contribution_score %></td>
+              <td><%= player.mvp %></td>
             </tr>
             <% } %>
           </tbody>
