@@ -5,6 +5,7 @@
     <meta lang="en" />
     <title></title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito%20Sans">
     <link rel="stylesheet" href="/assets/style.css">
   </head>
 
@@ -29,9 +30,11 @@
           <p class="card-text">
             <b><%= team1_name %></b> : <%= map.team1_score %><br>
             <b><%= team2_name %></b> : <%= map.team2_score %><br>
-            <b>Durée</b>: <%= map.duration %>min
           </p>
           <a href="/match/<%= matchid %>/map/<%= map.mapnumber %>" class="stretched-link">Détails</a>
+        </div>
+        <div class="card-footer text-muted">
+          Durée : <%= map.duration %>min
         </div>
       </div>
       <% } %>

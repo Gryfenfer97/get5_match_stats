@@ -5,7 +5,8 @@
     <meta lang="en" />
     <title></title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito%20Sans">
+    <link rel="stylesheet" href="/assets/style.css">
   </head>
 
   <body>
@@ -18,12 +19,12 @@
       </div>
     </nav>
     <main class="container">
-      <h1><%= team1_name %> - <%= team2_name %></h1>
+      <h1><strong><%= team1_name %> - <%= team2_name %></strong></h1>
       <div class="container px-2">
         <div class="row gx-5">
-          <div class="col d-flex">
-            <img src="/assets/maps/<%= map.mapname %>.jpg" height="150px" class="p-3 rounded" alt="<%= map.mapname %>" >
-            <div class="position-relative w-100">
+          <div class="col d-flex p-3">
+            <img src="/assets/maps/<%= map.mapname %>.jpg" height="150px" class="rounded" alt="<%= map.mapname %>" >
+            <div class="position-relative w-100 ps-3">
               <div class="position-absolute top-50 translate-middle-y">
                 <p><b>Début:</b> <%= start_time %></p>
                 <p><b>Durée:</b> <%= map.duration %>min</p>

@@ -14,7 +14,6 @@ app.enable('trust proxy')
 /**
  * Serve static public dir
  */
-console.log(config.assetsRoot)
 app.use('/assets', express.static(config.assetsRoot))
 
 /**
