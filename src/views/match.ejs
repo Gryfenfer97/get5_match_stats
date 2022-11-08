@@ -10,14 +10,7 @@
   </head>
 
   <body class="vh-100">
-    <nav class="navbar navbar-dark bg-dark">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="/">
-          <img src="/assets/logo.png" alt="Logo" height="24" class="d-inline-block align-text-top">
-          Résultats CS:GO
-        </a>
-      </div>
-    </nav>
+    <%- include('partials/navbar') %>
     <main class="container position-relative h-90">
       <div class="position-absolute top-50 translate-middle-y w-100">
       <h1 class="pb-5"><%= team1_name %> - <%= team2_name %></h1>
