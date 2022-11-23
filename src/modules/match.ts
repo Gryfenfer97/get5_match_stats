@@ -55,7 +55,7 @@ export async function getMaps(matchid: number){
 }
 
 export async function getMap(matchid: number, mapnumber: number){
-    const players = (await db.execute('SELECT * FROM get5_stats_players WHERE matchid=? AND mapnumber=?', [matchid, mapnumber]))[0] as Get5StatsPlayers[]
+    const players = (await db.execute('SELECT * FROM get5_stats_players WHERE matchid=? AND mapnumber=? ORDER BY kills DESC', [matchid, mapnumber]))[0] as Get5StatsPlayers[]
     const map = ((await db.execute('SELECT * FROM get5_stats_maps WHERE matchid=? AND mapnumber=?', [matchid, mapnumber]))[0] as any)[0]
     let match = ((await db.execute('SELECT * FROM get5_stats_matches WHERE matchid=?', [matchid]))[0] as [any])[0]
     map.duration = Math.round((map.end_time - map.start_time) / 60000)

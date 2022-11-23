@@ -1,3 +1,4 @@
+import config from '../config'
 import { Request, Response, Router } from 'express'
 import path from 'path'
 import { getMatchs, getMaps, getMap } from '../modules/match'
@@ -23,5 +24,5 @@ async function serveMapPage(req: Request, res: Response) {
 	const match = await getMap(parseInt(req.params.matchid), parseInt(req.params.mapnumber))
 	if(!process.env.DEMOS_BASE_URL) throw Error('no base url setup for demos')
 	const demo_url = path.join(process.env.DEMOS_BASE_URL, `${match.matchid}_map${match.map.mapnumber}_${match.map.mapname}.dem`)
-	res.render('map.ejs', {application_name: process.env.APPLICATION_NAME, demo_url, ...match})
+	res.render('map.ejs', {application_name: process.env.APPLICATION_NAME, demo_url, ...match, enable_demo: config.enable_demo})
 }

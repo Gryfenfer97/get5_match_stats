@@ -21,7 +21,7 @@
               <div class="position-absolute top-50 translate-middle-y">
                 <p><b>Début:</b> <%= start_time %></p>
                 <p><b>Durée:</b> <%= map.duration %>min</p>
-                <a href="<%= demo_url %>">Télécharger la démo</a>
+                <% if(enable_demo){ %><a href="<%= demo_url %>">Télécharger la démo</a> <% } %>
               </div>
             </div>
           </div>

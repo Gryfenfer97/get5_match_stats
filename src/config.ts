@@ -8,6 +8,7 @@ const assetsRoot  = path.join(process.cwd(), 'assets')
 export default {
     appRoot,
     assetsRoot,
+    enable_demo: process.env.ENABLE_DEMO === 'true',
     env: process.env
 }
 
