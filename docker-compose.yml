@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  app:
+    build: .
+    container_name: csgo-stats
+    network_mode: host
+    environment:
+    - DB_HOST=
+    - DB_NAME=get5
+    - DB_USER=get5_db_user
+    - DB_PASSWORD=
+    - PORT=8000
+    - APPLICATION_NAME=
+    - DEMOS_BASE_URL=
+    - ENABLE_DEMO=false
