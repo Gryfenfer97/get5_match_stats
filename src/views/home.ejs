@@ -13,28 +13,31 @@
     <%- include('partials/navbar') %>
     <main class="container">
       <h1>Resultats</h1>
+      <% for(let stage of stages){ %>
+      <h4><%= stage.name %></h4>
       <table class="table">
-          <thead>
-            <tr>
-              <th scope="col">Match</th>
-              <th scope="col">Equipes</th>
-              <th scope="col">Score</th>
-              <th scope="col">Type</th>
-              <th scope="col"></th>
-            </tr>
-          </thead>
-          <tbody>
-            <% for(let match of matches){ %>
-            <tr>
-              <th scope="row"><%= match.matchid %></th>
-              <td><%= match.team1_name %> - <%= match.team2_name %></td>
-              <td><%= match.team1_score %> - <%= match.team2_score %></td>
-              <td><%= match.series_type %></td>
-              <td><a href="/match/<%= match.matchid %>">Voir le détail</a></td>
-            </tr>
-            <% } %>
-          </tbody>
-        </table>
+        <thead>
+          <tr>
+            <th scope="col">Match</th>
+            <th scope="col">Equipes</th>
+            <th scope="col">Score</th>
+            <th scope="col">Type</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <% for(let match of stage.matches){ %>
+          <tr>
+            <th scope="row"><%= match.matchid %></th>
+            <td><%= match.team1_name %> - <%= match.team2_name %></td>
+            <td><%= match.team1_score %> - <%= match.team2_score %></td>
+            <td><%= match.series_type %></td>
+            <td><a href="/match/<%= match.matchid %>">Voir le détail</a></td>
+          </tr>
+          <% } %>
+        </tbody>
+      </table>
+      <% } %>
     </main>
   </body>
 </html>

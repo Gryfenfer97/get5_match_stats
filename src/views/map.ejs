@@ -27,7 +27,7 @@
           </div>
           <div class="col text-center">
             <h2><b>Resultats</b></h2>
-            <p><%= map.team1_score %> - <%= map.team2_score %></p>
+            <h4><%= map.team1_score %> - <%= map.team2_score %></h4>
           </div>
         </div>
       </div>
@@ -68,6 +68,7 @@
           </thead>
           <tbody>
             <% for(let player of players){ %>
+            <!--<tr class="<% if(player.team === 'team1') {%> text-bg-primary <% }else{ %> text-bg-danger <%}%>">-->
             <tr>
               <th scope="row"><%= player.name %></th>
               <td><%= player.kills %></td>
